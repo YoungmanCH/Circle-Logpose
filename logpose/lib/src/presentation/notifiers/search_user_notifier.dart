@@ -68,7 +68,8 @@ class _SearchUserNotifier extends StateNotifier<UserProfile?> {
 
   Future<void> _memberAddController() async {
     final userId = await _authController.fetchCurrentUserId();
-    final myAccount = await _userManagementController.fetchUserProfile(userId);
+    final myAccountProfile =
+        await _userManagementController.fetchUserProfile(userId);
     final accountId = accountIdController.text;
     _user = await _userManagementController
         .fetchUserProfileWithAccountId(accountId);
@@ -80,14 +81,19 @@ class _SearchUserNotifier extends StateNotifier<UserProfile?> {
     }
 
     // 自分のアカウントを検索した場合は、何も返さない。
-    if (myAccount == null || myAccount.accountId == _user!.accountId) {
+    if (myAccountProfile == null ||
+        myAccountProfile.accountId == _user!.accountId) {
       state = null;
       return;
     }
 
     // 既にGroup memberの場合は何も返さない。
     if (groupId != null) {
-      await _noReturnIfUserIsMember(accountId);
+      final isAlreadyMember = await _noReturnIfUserIsMember(accountId);
+      if (isAlreadyMember) {
+        state = null;
+        return;
+      }
     }
 
     // 既に追加済みのメンバーの場合は何も返さない。
@@ -99,15 +105,10 @@ class _SearchUserNotifier extends StateNotifier<UserProfile?> {
     _setUserProfile();
   }
 
-  Future<void> _noReturnIfUserIsMember(String accountId) async {
+  Future<bool> _noReturnIfUserIsMember(String accountId) async {
     final userId =
         await _userManagementController.fetchUserDocIdWithAccountId(accountId);
-    final isAlreadyMember =
-        await _membershipController.doesMemberExist(groupId!, userId);
-
-    if (isAlreadyMember) {
-      state = null;
-    }
+    return await _membershipController.doesMemberExist(groupId!, userId);
   }
 
   void _setUserProfile() {

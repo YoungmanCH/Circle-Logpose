@@ -5,7 +5,7 @@ import 'dart:io';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final imagePathSetNotifierProvider =
-    StateNotifierProvider<_ImagePathSetNotifier, File>(
+    StateNotifierProvider.autoDispose<_ImagePathSetNotifier, File>(
   (ref) => _ImagePathSetNotifier(),
 );
 

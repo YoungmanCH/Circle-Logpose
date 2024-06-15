@@ -51,7 +51,7 @@ class _GroupScheduleCardState extends ConsumerState<ScheduleCard> {
       dateLabelPositionTop: 0,
       dateLabelPositionLeft: 15,
       customImagePositionRight: 35,
-      customImageSize: deviceWidth * 0.08,
+      customImageSize: deviceWidth * 0.09,
     );
   }
 

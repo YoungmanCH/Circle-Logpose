@@ -38,9 +38,7 @@ class _AccountIdSectionState extends ConsumerState<AccountIdSection> {
         ],
         color: CupertinoColors.white,
         borderRadius: const BorderRadius.all(Radius.circular(60)),
-        border: Border.all(
-          color: const Color(0xFFD9D9D9),
-        ),
+        border: Border.all(color: const Color(0xFFD9D9D9)),
       ),
       child: CupertinoButton(
         padding: EdgeInsets.zero,

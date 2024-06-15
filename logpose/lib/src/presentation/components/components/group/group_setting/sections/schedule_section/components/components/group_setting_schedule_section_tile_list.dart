@@ -44,7 +44,7 @@ class _GroupSettingScheduleSectionTileListState
   Widget _buildMobileLayout(double deviceWidth, double deviceHeight) {
     return _buildLayout(
       containerWidth: deviceWidth * 0.7,
-      containerHeight: deviceHeight * 0.38,
+      containerHeight: deviceHeight * 0.34,
     );
   }
 

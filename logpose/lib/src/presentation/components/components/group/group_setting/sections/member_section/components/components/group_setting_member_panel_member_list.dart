@@ -38,7 +38,7 @@ class _GroupSettingMemberPanelMemberListState
   }
 
   Widget _buildMobileLayout(double deviceWidth) {
-    return _buildLayout(deviceWidth * 0.065);
+    return _buildLayout(deviceWidth * 0.08);
   }
 
   Widget _buildTabletLayout(double deviceWidth) {

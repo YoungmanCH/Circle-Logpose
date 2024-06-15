@@ -67,7 +67,7 @@ class _GroupMemberImageListNotifier extends StateNotifier<List<Widget>> {
   }
 
   Widget _buildMobileLayout(UserProfile? profile, double deviceWidth) {
-    return _buildLayout(profile, deviceWidth * 0.065);
+    return _buildLayout(profile, deviceWidth * 0.08);
   }
 
   Widget _buildTabletLayout(UserProfile? profile, double deviceWidth) {

@@ -42,7 +42,7 @@ class _UserSettingPageState extends ConsumerState<UserSettingPage> {
       child: SingleChildScrollView(
         child: Container(
           alignment: AlignmentDirectional.center,
-          margin: EdgeInsets.only(top: deviceHeight * 0.05),
+          margin: EdgeInsets.only(top: deviceHeight * 0.03),
           child: Column(
             children: [
               Container(

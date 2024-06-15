@@ -20,7 +20,7 @@ class CurrentAccountIdButton extends StatelessWidget {
       child: Row(
         children: [
           ConstrainedBox(
-            constraints: BoxConstraints(maxWidth: deviceWidth * 0.75),
+            constraints: BoxConstraints(maxWidth: deviceWidth * 0.7),
             child: Text(
               accountId,
               style: const TextStyle(

@@ -60,7 +60,7 @@ class _ScheduleDetailConfirmState extends ConsumerState<ScheduleDetailConfirm> {
       horizontalPadding: deviceWidth * 0.06,
       sizedBoxWidth: deviceWidth * 0.88,
       sizedBoxHeight: deviceHeight * 0.55,
-      customImageSize: deviceWidth * 0.08,
+      customImageSize: deviceWidth * 0.12,
     );
   }
 

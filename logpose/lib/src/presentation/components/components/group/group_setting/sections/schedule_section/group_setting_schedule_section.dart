@@ -44,7 +44,7 @@ class _GroupSettingScheduleSectionState
   Widget _buildMobileLayout(double deviceWidth, double deviceHeight) {
     return _buildLayout(
       sizedBoxWidth: deviceWidth * 0.89,
-      sizedBoxHeight: deviceHeight * 0.42,
+      sizedBoxHeight: deviceHeight * 0.38,
       deletionSwitchPositionTop: deviceHeight * 0.075,
     );
   }

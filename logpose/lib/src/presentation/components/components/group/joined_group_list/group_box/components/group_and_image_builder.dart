@@ -52,7 +52,7 @@ class _GroupAndImage extends StatelessWidget {
 
   Widget _buildMobileLayout(double deviceWidth) {
     return _buildLayout(
-      imageSize: deviceWidth * 0.08,
+      imageSize: deviceWidth * 0.09,
       textSize: deviceWidth * 0.04,
     );
   }

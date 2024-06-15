@@ -1,4 +1,4 @@
-package com.example.amazon_app
+package com.logpose.app
 
 import io.flutter.embedding.android.FlutterActivity
 

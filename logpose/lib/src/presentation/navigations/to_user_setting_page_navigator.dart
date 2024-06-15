@@ -8,12 +8,18 @@ class ToUserSettingPageNavigator {
   final BuildContext context;
 
   Future<void> moveToPage() async {
-    await Navigator.pushAndRemoveUntil(
+    await Navigator.push(
       context,
-      CupertinoPageRoute<CupertinoPageRoute<UserSettingPage>>(
-        builder: (context) => const UserSettingPage(),
+      PageRouteBuilder(
+        pageBuilder: (context, animation, secondaryAnimation) =>
+            UserSettingPage(),
+        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+          return FadeTransition(
+            opacity: animation,
+            child: child,
+          );
+        },
       ),
-      (_) => false,
     );
   }
 }

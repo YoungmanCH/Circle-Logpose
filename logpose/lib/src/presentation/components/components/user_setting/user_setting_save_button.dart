@@ -28,8 +28,9 @@ class _UserSettingSaveButtonState extends ConsumerState<UserSettingSaveButton> {
       onPressed: _handleUpdate,
       color: const Color(0xFF7B61FF),
       borderRadius: BorderRadius.circular(30),
+      padding: EdgeInsets.only(left: 20, right: 20),
       child: SizedBox(
-        width: 117,
+        width: 110,
         child: Row(
           children: [
             DecoratedBox(

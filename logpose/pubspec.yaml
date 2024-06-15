@@ -1,7 +1,7 @@
 name: logpose
 description: Logpose is designed for managing club activities. It primarily features AI-powered chat functionality, attendance management, visualization of attendance rates through charts, user profile capabilities, and the ability to form small teams within the club.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
-version: 1.1.10+1
+version: 1.1.11+2
 environment:
   sdk: '>=3.0.6 <4.0.0'
 

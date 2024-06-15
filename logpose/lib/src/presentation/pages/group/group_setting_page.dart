@@ -43,7 +43,7 @@ class _GroupSettingPageState extends ConsumerState<GroupSettingPage> {
 
   Widget _buildMobileLayout(double deviceWidth, double deviceHeight) {
     return _buildLayout(
-      containerMarginTop: deviceHeight * 0.05,
+      containerMarginTop: deviceHeight * 0.03,
     );
   }
 
